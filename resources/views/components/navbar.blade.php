@@ -25,8 +25,8 @@
 
             <!-- Right Actions -->
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#" class="text-charcoal hover:text-forest text-sm font-medium transition-colors">Login</a>
-                <a href="#" class="bg-forest text-ivory hover:bg-forest-dark px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm">Join KarmaSetu</a>
+                <a href="/login" class="text-charcoal hover:text-forest text-sm font-medium transition-colors">Login</a>
+                <a href="/register" class="bg-forest text-ivory hover:bg-forest-dark px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm">Join KarmaSetu</a>
             </div>
 
             <!-- Mobile menu button -->
@@ -50,13 +50,12 @@
             <a href="/causes" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">Causes</a>
             <a href="/causes" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">Donate</a>
             <a href="/events" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">Events</a>
-            <a href="#" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">Volunteer</a>
             <a href="/ngos" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">NGOs</a>
             <a href="/about" class="block px-3 py-2 text-base font-medium text-charcoal hover:bg-ivory-dark hover:text-forest rounded-md">About</a>
         </div>
         <div class="pt-4 pb-4 border-t border-gold/20 px-4 flex flex-col space-y-3">
-            <a href="#" class="text-center text-charcoal font-medium border border-charcoal/20 rounded-full py-2">Login</a>
-            <a href="#" class="text-center bg-forest text-ivory font-medium rounded-full py-2">Join KarmaSetu</a>
+            <a href="/login" class="text-center text-charcoal font-medium border border-charcoal/20 rounded-full py-2">Login</a>
+            <a href="/register" class="text-center bg-forest text-ivory font-medium rounded-full py-2">Join KarmaSetu</a>
         </div>
     </div>
 </nav>

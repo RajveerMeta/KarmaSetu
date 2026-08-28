@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Tel check
         if (isValid && field.type === 'tel' && value !== '') {
-            const phonePattern = /^[0-9\-\+\s]{10,15}$/;
+            const phonePattern = /^[0-9\-\+\s]{10}$/;
             if (!phonePattern.test(value)) {
                 isValid = false;
                 errorMessage = 'Please enter a valid phone number.';
