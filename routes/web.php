@@ -66,3 +66,32 @@ Route::get('/register', function () {
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 });
+
+Route::get('/user/dashboard', function () {
+    return view('user.dashboard');
+});
+
+Route::get('/user/contributions', function () {
+    return view('user.contributions');
+});
+
+Route::get('/user/contributions/{id}', function ($id) {
+    return view('user.contribution-details', ['id' => $id]);
+});
+
+Route::get('/user/events', function () {
+    $events = require app_path('Data/events.php');
+    return view('user.events', compact('events'));
+});
+
+Route::get('/user/volunteer-activities', function () {
+    return view('user.volunteer-activities');
+});
+
+Route::get('/leaderboard', function () {
+    return view('leaderboard');
+});
+
+Route::get('/user/profile', function () {
+    return view('profile');
+});

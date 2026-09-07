@@ -1,33 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- 01. BREADCRUMB -->
-    <div class="bg-ivory border-b border-gold/10 pt-24 pb-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex text-sm text-charcoal-light font-medium" aria-label="Breadcrumb">
-                <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                    <li class="inline-flex items-center">
-                        <a href="/" class="hover:text-forest transition-colors">Home</a>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-gray-400 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <a href="/events" class="hover:text-forest transition-colors">Events</a>
-                        </div>
-                    </li>
-                    <li aria-current="page">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-gray-400 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <span class="text-forest truncate max-w-[200px] sm:max-w-md">{{ $event['title'] }}</span>
-                        </div>
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-
-    <!-- 02. EVENT HERO SECTION -->
-    <section class="bg-ivory pb-12 pt-8">
+    <!-- 01. EVENT HERO SECTION -->
+    <section class="bg-ivory pb-12 pt-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Hero Image Box -->

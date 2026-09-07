@@ -14,8 +14,12 @@
                 <p class="text-charcoal-light">Login to continue your KarmaSetu journey.</p>
             </div>
             
-            <form class="space-y-6" action="#" method="POST">
+            <form id="LoginForm" class="space-y-6" action="#" method="POST" novalidate>
                 @csrf
+                
+                <div id="loginErrorMsg" class="hidden mb-4 p-4 rounded-lg bg-red-50 border border-red-200">
+                    <p class="text-sm font-medium text-red-600">Invalid demo credentials.</p>
+                </div>
                 
                 <div class="space-y-5">
                     <div>
@@ -68,4 +72,49 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Phase 1 Frontend Demo Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('demoLoginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const errorMsg = document.getElementById('loginErrorMsg');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            errorMsg.classList.add('hidden');
+            emailInput.classList.remove('border-red-500');
+            passwordInput.classList.remove('border-red-500');
+
+            if (emailInput.value === 'demo@karmasetu.test' && passwordInput.value === 'Demo@12345') {
+                // Successful demo login
+                const demoUser = {
+                    name: "Rajveer",
+                    email: "demo@karmasetu.test",
+                    role: "user",
+                    karmaPoints: 1280
+                };
+                
+                localStorage.setItem('karmaSetuDemoUser', JSON.stringify(demoUser));
+                window.location.href = '/user/dashboard';
+            } else {
+                // Failed login
+                errorMsg.classList.remove('hidden');
+                emailInput.classList.add('border-red-500');
+                passwordInput.classList.add('border-red-500');
+            }
+        });
+        
+        // Clear errors on input
+        [emailInput, passwordInput].forEach(input => {
+            input.addEventListener('input', function() {
+                errorMsg.classList.add('hidden');
+                emailInput.classList.remove('border-red-500');
+                passwordInput.classList.remove('border-red-500');
+            });
+        });
+    });
+</script>
 @endsection
